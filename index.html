@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunera Mehak | Aspiring Data Scientist & AI/ML Engineer</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Sunera Mehak's professional portfolio website. Aspiring Data Scientist, B.E in CS (AI & ML) student with 9.21 CGPA, specializing in Data Analysis, AI, and Machine Learning.">
+    <meta name="keywords" content="Sunera Mehak, Data Scientist, Machine Learning, AI, Portfolio, Python, Data Analyst, Resume">
+    <meta name="author" content="Sunera Mehak">
+    
+    <!-- Google Fonts - Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Apple-inspired Loading Screen -->
+    <div id="loader" class="loader-container">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="logo-text">SM</span>
+                <span class="logo-dot">.</span>
+            </div>
+            <div class="loader-progress-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor (Desktop Only) -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollBar"></div>
+    </div>
+
+    <!-- Frosted Navigation Bar -->
+    <header class="navbar-header">
+        <div class="navbar-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">SM</span>
+                <span class="logo-dot">.</span>
+            </a>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="menu-icon-open"></i>
+                <i data-lucide="x" class="menu-icon-close hidden"></i>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Settings / Utilities -->
+            <div class="nav-utils">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+                <a href="assets/resume.pdf" class="nav-cta-btn" target="_blank" rel="noopener">Resume</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content reveal-fade-left">
+                    <h5 class="hero-greeting">Hello, I'm</h5>
+                    <h1 class="hero-name">Sunera Mehak</h1>
+                    
+                    <!-- Dynamic Typing Subtitle -->
+                    <div class="typing-container">
+                        <span class="typing-prefix">I am an </span>
+                        <span id="typed-role" class="typing-text"></span>
+                        <span class="typing-cursor">|</span>
+                    </div>
+                    
+                    <p class="hero-tagline">Turning Data into Intelligent Solutions.</p>
+                    
+                    <div class="hero-actions">
+                        <a href="assets/resume.pdf" class="btn btn-primary" target="_blank" download="Sunera_Mehak_Resume.pdf">
+                            <span>Download Resume</span>
+                            <i data-lucide="download"></i>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <span>View Projects</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-tertiary">
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Photo Block -->
+                <div class="hero-image-wrapper reveal-fade-right">
+                    <div class="profile-glow-circle"></div>
+                    <div class="profile-image-container">
+                        <img src="assets/profile.jpg" alt="Sunera Mehak Professional Portrait" class="profile-photo">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Indicator -->
+            <div class="hero-scroll-indicator">
+                <p>Scroll to discover</p>
+                <div class="indicator-mouse">
+                    <div class="mouse-wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Panel (Dynamic Counters) -->
+        <section class="stats-section">
+            <div class="container stats-container">
+                <div class="stat-card glass-card reveal-up">
+                    <div class="stat-icon-wrapper blue-glow">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <div class="stat-value"><span class="counter" data-target="9.21" data-decimals="2">0.00</span></div>
+                    <div class="stat-label">CGPA</div>
+                </div>
+                <div class="stat-card glass-card reveal-up" data-delay="100">
+                    <div class="stat-icon-wrapper purple-glow">
+                        <i data-lucide="folder-git-2"></i>
+                    </div>
+                    <div class="stat-value"><span class="counter" data-target="1">0</span>+</div>
+                    <div class="stat-label">Core Projects</div>
+                </div>
+                <div class="stat-card glass-card reveal-up" data-delay="200">
+                    <div class="stat-icon-wrapper green-glow">
+                        <i data-lucide="file-check-2"></i>
+                    </div>
+                    <div class="stat-value"><span class="counter" data-target="3">0</span></div>
+                    <div class="stat-label">Certifications</div>
+                </div>
+                <div class="stat-card glass-card reveal-up" data-delay="300">
+                    <div class="stat-icon-wrapper orange-glow">
+                        <i data-lucide="briefcase"></i>
+                    </div>
+                    <div class="stat-value"><span class="counter" data-target="1">0</span></div>
+                    <div class="stat-label">Internship</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-title-wrapper reveal-up">
+                    <span class="section-subtitle">Biography</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-title-bar"></div>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Text Info -->
+                    <div class="about-info-panel reveal-fade-left">
+                        <h3 class="about-intro-heading">Passionate AI/ML Student & Aspiring Data Scientist</h3>
+                        <p class="about-desc">
+                            I am a Computer Science Engineering student specializing in **Artificial Intelligence & Machine Learning** at Maharaja Institute of Technology Thandavapura. With a solid academic foundation marked by a **CGPA of 9.21**, I am seeking opportunities to apply my technical skills to solve complex, real-world problems.
+                        </p>
+                        <p class="about-desc">
+                            My core technical interests lie at the intersection of data engineering, predictive modeling, and intelligent software architecture. I love digging into raw datasets to extract actionable insights, building predictive algorithms, and designing end-to-end intelligent systems that make lives simpler and agriculture smarter.
+                        </p>
+                        
+                        <div class="about-quick-specs">
+                            <div class="spec-item">
+                                <i data-lucide="graduation-cap"></i>
+                                <div>
+                                    <h4>Education</h4>
+                                    <p>B.E. Computer Science (AI & ML) - Expected 2027</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i data-lucide="map-pin"></i>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Bangalore, Karnataka, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Grid Focus Cards -->
+                    <div class="about-focus-panel reveal-fade-right">
+                        <div class="focus-grid">
+                            <div class="focus-card glass-card">
+                                <i data-lucide="brain-circuit" class="focus-icon"></i>
+                                <h4>Artificial Intelligence</h4>
+                                <p>Deep learning networks, intelligent systems, and logic planning.</p>
+                            </div>
+                            <div class="focus-card glass-card">
+                                <i data-lucide="bar-chart-3" class="focus-icon"></i>
+                                <h4>Data Analytics</h4>
+                                <p>Statistical analysis, behavioral trends, and visual storytelling.</p>
+                            </div>
+                            <div class="focus-card glass-card">
+                                <i data-lucide="cpu" class="focus-icon"></i>
+                                <h4>Machine Learning</h4>
+                                <p>Supervised and unsupervised models for classification and estimation.</p>
+                            </div>
+                            <div class="focus-card glass-card">
+                                <i data-lucide="database" class="focus-icon"></i>
+                                <h4>Data Engineering</h4>
+                                <p>Cleaning datasets, structural queries, and pipeline preparation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-title-wrapper reveal-up">
+                    <span class="section-subtitle">Competencies</span>
+                    <h2 class="section-title">My Technical Toolbox</h2>
+                    <div class="section-title-bar"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Programming -->
+                    <div class="skill-category-card glass-card reveal-up">
+                        <div class="skill-cat-header">
+                            <i data-lucide="code-2" class="cat-icon blue-text"></i>
+                            <h3>Programming</h3>
+                        </div>
+                        <ul class="skill-items-list">
+                            <li>
+                                <div class="skill-name-percentage">
+                                    <span>Python</span>
+                                    <span>Advanced</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percentage">
+                                    <span>Java</span>
+                                    <span>Intermediate</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 75%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percentage">
+                                    <span>C</span>
+                                    <span>Intermediate</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 70%;"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Data Science -->
+                    <div class="skill-category-card glass-card reveal-up" data-delay="100">
+                        <div class="skill-cat-header">
+                            <i data-lucide="bar-chart-horizontal" class="cat-icon purple-text"></i>
+                            <h3>Data Science</h3>
+                        </div>
+                        <ul class="skill-items-list">
+                            <li>
+                                <div class="skill-name-percentage">
+                                    <span>Data Analysis & Cleaning</span>
+                                    <span>Advanced</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 88%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percentage">
+                                    <span>Data Visualization</span>
+                                    <span>Advanced</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percentage">
+                                    <span>Power BI & Tableau</span>
+                                    <span>Proficient</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percentage">
+                                    <span>Excel</span>
+                                    <span>Advanced</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- AI -->
+                    <div class="skill-category-card glass-card reveal-up" data-delay="200">
+                        <div class="skill-cat-header">
+                            <i data-lucide="binary" class="cat-icon green-text"></i>
+                            <h3>AI & Engineering</h3>
+                        </div>
+                        <ul class="skill-items-list">
+                            <li>
+                                <div class="skill-name-percentage">
+                                    <span>Machine Learning</span>
+                                    <span>Advanced</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percentage">
+                                    <span>Artificial Intelligence</span>
+                                    <span>Advanced</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percentage">
+                                    <span>Problem Solving & Algorithms</span>
+                                    <span>Excellent</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="skill-category-card glass-card reveal-up" data-delay="300">
+                        <div class="skill-cat-header">
+                            <i data-lucide="users" class="cat-icon orange-text"></i>
+                            <h3>Soft Skills</h3>
+                        </div>
+                        <ul class="skill-items-list">
+                            <li>
+                                <div class="skill-name-percentage">
+                                    <span>Leadership</span>
+                                    <span>Advanced</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percentage">
+                                    <span>Communication</span>
+                                    <span>Excellent</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 92%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-percentage">
+                                    <span>Teamwork & Collaboration</span>
+                                    <span>Advanced</span>
+                                </div>
+                                <div class="progress-track"><div class="progress-fill" style="width: 95%;"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section section-padding">
+            <div class="container">
+                <div class="section-title-wrapper reveal-up">
+                    <span class="section-subtitle">Professional Path</span>
+                    <h2 class="section-title">Experience Timeline</h2>
+                    <div class="section-title-bar"></div>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <!-- Timeline Card 1 -->
+                    <div class="timeline-item reveal-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-card-header">
+                                <span class="experience-badge">Internship</span>
+                                <span class="experience-duration"><i data-lucide="calendar"></i> Oct 2025 – Dec 2025</span>
+                            </div>
+                            <h3 class="experience-title">Data Analyst Intern</h3>
+                            <h4 class="experience-company">InLighnX Global Pvt. Ltd.</h4>
+                            
+                            <ul class="experience-details">
+                                <li>
+                                    <div class="detail-icon"><i data-lucide="check-circle-2"></i></div>
+                                    <span><strong>Customer Purchasing Behavior Analysis:</strong> Analyzed e-commerce transaction logs to identify purchasing frequency, high-value customer demographics, and top product configurations.</span>
+                                </li>
+                                <li>
+                                    <div class="detail-icon"><i data-lucide="check-circle-2"></i></div>
+                                    <span><strong>Movie Dataset Analysis:</strong> Evaluated film industry records to measure correlation margins between budgets, release windows, genres, and audience rating indices.</span>
+                                </li>
+                                <li>
+                                    <div class="detail-icon"><i data-lucide="check-circle-2"></i></div>
+                                    <span><strong>Loan Approval Analysis:</strong> Audited lending histories to identify structural factors driving loan application decisions, such as income level and credit history.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Card 2 -->
+                    <div class="timeline-item reveal-up" data-delay="100">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-card-header">
+                                <span class="experience-badge academic">Education</span>
+                                <span class="experience-duration"><i data-lucide="calendar"></i> 2023 - Present</span>
+                            </div>
+                            <h3 class="experience-title">B.E. in Computer Science & Engineering (AI & ML)</h3>
+                            <h4 class="experience-company">Maharaja Institute of Technology Thandavapura</h4>
+                            <p class="timeline-text">
+                                Actively learning advanced methodologies in statistical modelling, data structures, design and analysis of algorithms, linear algebra for machine learning, artificial intelligence paradigms, and database designs.
+                            </p>
+                            <div class="timeline-highlights">
+                                <span><i data-lucide="star"></i> CGPA: 9.21</span>
+                                <span><i data-lucide="award"></i> Outstanding Academic Track</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-title-wrapper reveal-up">
+                    <span class="section-subtitle">Works</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-title-bar"></div>
+                </div>
+
+                <div class="projects-container">
+                    <!-- Project 1 (Solar Soil Monitor) -->
+                    <div class="project-large-card glass-card reveal-up">
+                        <div class="project-content-grid">
+                            <div class="project-info-side">
+                                <div class="project-status-wrapper">
+                                    <span class="status-badge pulse-badge">Ongoing</span>
+                                    <span class="project-role"><i data-lucide="crown"></i> Team Leader</span>
+                                </div>
+                                <h3 class="project-title-large">Smart Solar Soil Monitoring System with Real-Time Mobile Alerts</h3>
+                                <p class="project-desc-large">
+                                    Developing an AI & IoT-based solar-powered smart agricultural solution that continually monitors soil metrics (moisture, temperature, pH) using custom sensory arrays and triggers automated real-time alerts. This ensures highly efficient, precision irrigation management to save water and improve crop yields.
+                                </p>
+                                
+                                <h4 class="project-roles-subtitle">Team Leader Responsibilities:</h4>
+                                <div class="project-responsibilities-tags">
+                                    <span>Project Planning</span>
+                                    <span>Task Allocation</span>
+                                    <span>Team Coordination</span>
+                                    <span>System Architecture</span>
+                                    <span>Progress Tracking</span>
+                                </div>
+                                
+                                <div class="project-card-actions">
+                                    <button class="btn btn-primary open-project-modal-btn">
+                                        <span>View Details</span>
+                                        <i data-lucide="maximize-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Visual Graphic Representation -->
+                            <div class="project-graphic-side">
+                                <div class="solar-soil-mockup">
+                                    <div class="dashboard-header">
+                                        <span class="dash-dot red"></span>
+                                        <span class="dash-dot yellow"></span>
+                                        <span class="dash-dot green"></span>
+                                        <span class="dash-title">Smart Soil System Live Diagnostics</span>
+                                    </div>
+                                    <div class="dashboard-content">
+                                        <div class="dashboard-metric">
+                                            <div class="metric-circle blue-glow">
+                                                <span class="metric-val">42%</span>
+                                                <span class="metric-label">Soil Moisture</span>
+                                            </div>
+                                            <div class="metric-circle green-glow">
+                                                <span class="metric-val">7.2</span>
+                                                <span class="metric-label">Soil pH</span>
+                                            </div>
+                                        </div>
+                                        <div class="dashboard-graph">
+                                            <div class="bar" style="--h: 60%;"></div>
+                                            <div class="bar" style="--h: 80%;"></div>
+                                            <div class="bar" style="--h: 45%;"></div>
+                                            <div class="bar" style="--h: 90%;"></div>
+                                            <div class="bar" style="--h: 70%;"></div>
+                                        </div>
+                                        <div class="system-status">
+                                            <i data-lucide="cpu" class="status-icon active-spin"></i>
+                                            <span class="status-text">Processor Online (Solar Powered)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications-section section-padding">
+            <div class="container">
+                <div class="section-title-wrapper reveal-up">
+                    <span class="section-subtitle">Credentials</span>
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="section-title-bar"></div>
+                </div>
+
+                <div class="certifications-grid">
+                    <!-- Cert 1 -->
+                    <div class="cert-card glass-card reveal-up">
+                        <div class="cert-badge-icon blue-glow-soft">
+                            <i data-lucide="cloud"></i>
+                        </div>
+                        <h3 class="cert-title">Microsoft Azure Certification</h3>
+                        <p class="cert-issuer">Microsoft Cloud Credentials</p>
+                        <p class="cert-description">Validation of foundational cloud knowledge, architecture services, governance structures, and basic artificial intelligence support vectors on Microsoft Azure.</p>
+                        <div class="cert-footer">
+                            <span class="cert-tag">Cloud</span>
+                            <span class="cert-tag">Azure</span>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="cert-card glass-card reveal-up" data-delay="100">
+                        <div class="cert-badge-icon yellow-glow-soft">
+                            <i data-lucide="terminal"></i>
+                        </div>
+                        <h3 class="cert-title">Python Programming</h3>
+                        <p class="cert-issuer">Advanced Programming Credentials</p>
+                        <p class="cert-description">Demonstrated core proficiency in software design, functional programming patterns, OOP design principles, dataset manipulation, and debugging structures.</p>
+                        <div class="cert-footer">
+                            <span class="cert-tag">Python</span>
+                            <span class="cert-tag">Programming</span>
+                        </div>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="cert-card glass-card reveal-up" data-delay="200">
+                        <div class="cert-badge-icon green-glow-soft">
+                            <i data-lucide="cloud-lightning"></i>
+                        </div>
+                        <h3 class="cert-title">Google Cloud Career Launchpad</h3>
+                        <p class="cert-issuer">Google Cloud Platform Track</p>
+                        <p class="cert-description">Completed the Cloud Engineer Track verifying capabilities in configuring computing clusters, infrastructure scaling, container orchestration (GKE), and analytics pipelines.</p>
+                        <div class="cert-footer">
+                            <span class="cert-tag">GCP</span>
+                            <span class="cert-tag">Cloud Engineer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-title-wrapper reveal-up">
+                    <span class="section-subtitle">Get in Touch</span>
+                    <h2 class="section-title">Contact Information</h2>
+                    <div class="section-title-bar"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Left: Detail Cards -->
+                    <div class="contact-info-panel reveal-fade-left">
+                        <h3 class="contact-panel-title">Let's build something intelligent.</h3>
+                        <p class="contact-panel-desc">I am actively looking for internships, research programs, or developer placements where I can apply my Machine Learning and Data Science capabilities.</p>
+                        
+                        <div class="contact-details-list">
+                            <!-- Email -->
+                            <a href="mailto:suneramehek@gmail.com" class="contact-detail-item glass-card hover-glow">
+                                <div class="contact-icon blue-glow-soft">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Email Address</h4>
+                                    <p>suneramehek@gmail.com</p>
+                                </div>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://linkedin.com/in/sunera-mehak-37742b315" class="contact-detail-item glass-card hover-glow" target="_blank" rel="noopener">
+                                <div class="contact-icon purple-glow-soft">
+                                    <i data-lucide="linkedin"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>LinkedIn</h4>
+                                    <p>linkedin.com/in/sunera-mehak-37742b315</p>
+                                </div>
+                            </a>
+
+                            <!-- GitHub -->
+                            <a href="https://github.com" class="contact-detail-item glass-card hover-glow" target="_blank" rel="noopener">
+                                <div class="contact-icon dark-glow-soft">
+                                    <i data-lucide="github"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>GitHub Profiles</h4>
+                                    <p>github.com/sunera-mehak</p>
+                                </div>
+                            </a>
+
+                            <!-- Phone -->
+                            <a href="tel:+917483016045" class="contact-detail-item glass-card hover-glow">
+                                <div class="contact-icon green-glow-soft">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Phone / Mobile</h4>
+                                    <p>+91 7483016045</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Fast Action Buttons Panel -->
+                    <div class="contact-actions-panel glass-card reveal-fade-right">
+                        <div class="actions-panel-header">
+                            <i data-lucide="message-square"></i>
+                            <h3>Quick Actions</h3>
+                        </div>
+                        <p class="quick-action-info">Direct buttons to start an email, download credentials, or check professional network channels immediately.</p>
+                        
+                        <div class="quick-buttons-stack">
+                            <a href="mailto:suneramehek@gmail.com" class="btn btn-primary stack-btn" target="_blank" rel="noopener">
+                                <span>Send Email</span>
+                                <i data-lucide="send"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/sunera-mehak-37742b315" class="btn btn-secondary stack-btn" target="_blank" rel="noopener">
+                                <span>LinkedIn Profile</span>
+                                <i data-lucide="external-link"></i>
+                            </a>
+                            <a href="assets/resume.pdf" class="btn btn-tertiary stack-btn" target="_blank" download="Sunera_Mehak_Resume.pdf">
+                                <span>Download Resume</span>
+                                <i data-lucide="download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <h3 class="footer-logo">SM<span>.</span></h3>
+                <p class="footer-tagline">Turning Data into Intelligent Solutions.</p>
+            </div>
+            
+            <div class="footer-right">
+                <p class="credits-text">Designed & Developed by <strong>Sunera Mehak</strong></p>
+                <p class="credits-subtext">Aspiring Data Scientist | AI & ML Student</p>
+                <p class="copyright-text">&copy; 2026 Sunera Mehak. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Project Details Modal -->
+    <div id="projectModal" class="modal-overlay hidden">
+        <div class="modal-card glass-card">
+            <button class="modal-close-btn" id="closeModalBtn" aria-label="Close details">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="modal-body">
+                <span class="modal-badge">Ongoing Project Details</span>
+                <h3 class="modal-project-title">Smart Solar Soil Monitoring System with Real-Time Mobile Alerts</h3>
+                
+                <div class="modal-meta-grid">
+                    <div class="meta-tag">
+                        <strong>Role:</strong> Team Leader
+                    </div>
+                    <div class="meta-tag">
+                        <strong>Status:</strong> Implementation Phase
+                    </div>
+                    <div class="meta-tag">
+                        <strong>Power System:</strong> Photovoltaic (Solar) Array
+                    </div>
+                </div>
+
+                <h4 class="modal-section-title">Project Overview</h4>
+                <p>Agriculture suffers from over-irrigation or water depletion due to unmonitored soil. This project creates an autonomous system leveraging Internet of Things (IoT) sensors and micro-controllers (e.g. ESP32/Arduino) run on solar batteries. Sensors measure moisture, chemical pH, and temperature. An integrated AI-model runs predictions on whether plants require water based on weather forecast trends, sending alerts to farmer mobile devices via GSM or Wi-Fi notifications.</p>
+
+                <h4 class="modal-section-title">Key Architectural Features</h4>
+                <ul class="modal-bullet-list">
+                    <li><strong>Energy Independence:</strong> 10W solar panels charging a lithium battery pack for continuous field operations.</li>
+                    <li><strong>Sensor Arrays:</strong> Soil hygrometers, NPK chemical sensors, and digital DHT thermometers.</li>
+                    <li><strong>Edge Processing:</strong> Intelligent forecasting rules on the micro-controller to determine critical trigger thresholds.</li>
+                    <li><strong>Alert System:</strong> Custom notifications push to mobile displays immediately upon threshold breaches.</li>
+                </ul>
+
+                <h4 class="modal-section-title">Leadership Responsibilities (Sunera Mehak)</h4>
+                <ul class="modal-bullet-list">
+                    <li>Allocating electrical wiring and code-construction modules to team members.</li>
+                    <li>Coordinating circuit design assemblies with firmware coders.</li>
+                    <li>Setting project schedules and tracking milestones to verify execution deliverables.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+        <i data-lucide="chevron-up"></i>
+    </button>
+
+    <!-- Core Script -->
+    <script src="script.js"></script>
+</body>
+</html>
